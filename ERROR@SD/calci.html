@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Visit Some interesting websites. This is Sudhanshu's Personal Website you all can different website which is created by Sudhanshu for useful purpose">
+    <meta name="keywords" content="ERROR, Portfolio, Visit Handmade Websites, Websites">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="author" content="Sudhanshu Barnwal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <style>
+        table {
+            margin-top: 40px;
+            border-radius: 40px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            font-size: 77px;
+            width: 130px;
+            height: 120px;
+            margin: 1px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 700;
+            color: #135e02;
+            background-color: #EAFFE5;
+            border-radius: 45px;
+            transition-duration: 1.2s;
+            border: 11px double #FF0C0C;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 27px 5px black;
+            color: red;
+            border: 11px double #1E8C05;
+        }
+
+        .sud {
+            font-family: georgia;
+            font-size: 50px;
+            color: rgb(56, 3, 3);
+            text-shadow: 0 0 40px white;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        body::before {
+            content: "";
+            background: url("https://wallpapers.com/images/high/cool-calculator-with-formulas-gy7fwb9k68gum8hc.jpg") no-repeat fixed center/cover;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 190%;
+            z-index: -1;
+            left: 0px;
+            opacity: 0.75;
+        }
+
+        #que {
+            box-sizing: border-box;
+            width: 540px;
+            height: 95px;
+            font-size: 40px;
+            padding: 18px 30px;
+            margin: 5px;
+            color: #900397;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 750;
+            outline: none;
+            border: 7px solid #040f83;
+            border-radius: 40px;
+        }
+
+        #ans {
+            border: 7px solid #040f83;
+            box-sizing: border-box;
+            width: 410px;
+            height: 120px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 750;
+            color: #B24900;
+            font-size: 40px;
+            padding: 18px 30px;
+            margin: 5px;
+            outline: none;
+            border-radius: 40px;
+        }
+
+        @media (max-width:1000px) and (min-width:620px) {
+            .sud {
+                margin-top: 60px;
+            }
+
+            body::before {
+                height: 190%;
+            }
+        }
+
+        @media (max-width:620px) and (min-width:420px) {
+            .btn {
+                font-size: 40px;
+                width: 85px;
+                height: 85px;
+                border-radius: 30px;
+            }
+
+            body::before {
+                height: 145%;
+            }
+
+            #que {
+                font-size: 35;
+                width: 360px;
+                height: 65px;
+            }
+
+            #ans {
+                font-size: 35px;
+                width: 270px;
+                height: 65px;
+            }
+
+            .sud {
+                font-size: 35px;
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width:420px) and (min-width:300px) {
+            .btn {
+                font-size: 27px;
+                width: 60px;
+                height: 60px;
+                border: 5px double #FF0C0C;
+                border-radius: 22px;
+            }
+
+            .btn:hover {
+                border: 5px double darkgreen;
+            }
+
+            #que {
+                font-size: 26px;
+                width: 240px;
+                padding: 10px 22px;
+                border: 3px solid #040f83;
+                height: 60px;
+            }
+
+            #ans {
+                font-size: 26px;
+                padding: 10px 22px;
+                width: 180px;
+                border: 3px solid #040f83;
+                height: 60px;
+            }
+
+            body::before {
+                height: 110%;
+            }
+
+            .sud {
+                font-size: 21px;
+                margin-top: 25px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" href="error.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body align="center">
+    <div class="up">
+        <label id="menu"><i class='bx bx-menu'></i> </label>
+        <b> <u>CALCULATOR</u></b>
+    </div>
+
+    <nav class="sidebar">
+        <div class="nav">
+            <ul>
+                <li><a href="index.html"><i class='bx bxs-home'></i> Home <i class='bx bxs-home'></i></a>
+                </li>
+
+                <li><a href="mahbooks.html"><i class='bx bxs-book'></i> Maharastra Books <i
+                            class='bx bxs-book'></i></a>
+                </li>
+
+                <li><a href="bmicalci.html"> <i class='bx bx-dumbbell'></i> BMI Calculator <i
+                            class='bx bx-dumbbell'></i></a></li>
+
+                <li><a href="mencalci.html"><i class='bx bx-cube'></i> Mensuration Calculator <i
+                            class='bx bxs-traffic-cone'></i></a></li>
+
+                <li><a href="calci.html"><i class='bx bxs-calculator'></i> Calculator <i
+                            class='bx bxs-calculator'></i></a></li>
+
+                <li><a href="discalci.html"><i class='bx bxs-discount'></i> Discount Calculator <i
+                            class='bx bxs-discount'></i></a></li>
+
+                <li><a href="gstcalci.html"><i class='bx bx-rupee'></i> GST Calculator <i
+                            class='bx bx-rupee'></i></a>
+                </li>
+
+                <li><a href="powcalci.html"><i class='bx bxs-square'></i> Power Calculator <i
+                            class='bx bxs-square'></i></a></li>
+
+                <li><a href="pahada.html"><i class='bx bx-table'></i> Pahada(Table) <i
+                            class='bx bx-table'></i></a></li>
+
+                <li><a href="sscres.html"><i class='bx bxs-school'></i> ERROR&#12484;SD
+                        10<sup>th</sup>Result <i class='bx bxs-school'></i></a></li>
+
+                <li><a href="hscres.html"><i class='bx bx-book-reader'></i> ERROR&#12484;SD
+                        12<sup>th</sup>Result <i class='bx bx-book-reader'></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <center>
+        <table align="center">
+
+            <tr>
+                <td colspan="4"> <input type="text" name="que" autocomplete="off" placeholder="Your Query......."
+                        readonly id="que">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3"> <input type="text" value="&equals;" readonly name="ans" autocomplete="off" id="ans">
+                </td>
+                <td>
+                    <input type="button" name="bs" class="btn" id="bs" onclick="Bs()" value="&#x232b;">
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="button" name="c" onclick="C()" class="btn" id="c" value="C">
+                </td>
+
+                <td> <input type="button" name="lb" class="btn" id="lb" onclick="Print('&#40;')" value="&#40;"> </td>
+
+                <td> <input type="button" name="rb" class="btn" onclick="Print('&#41;')" id="rb" value="&#41;"> </td>
+
+                <td> <input type="button" name="divide" onclick="Print('/')" class="btn" id="divide" value="&divide;">
+                </td>
+
+            </tr>
+
+            <tr>
+                <td> <input type="button" name="seven" onclick="Print('7')" class="btn" id="seven" value="7"> </td>
+                <td> <input type="button" name="eight" onclick="Print('8')" class="btn" id="eight" value="8"> </td>
+                <td><input type="button" name="nine" onclick="Print('9')" class="btn" id="nine" value="9"></td>
+                <td><input type="button" name="multiply" onclick="Print('*')" class="btn" id="multiply" value="&times;">
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="button" name="four" onclick="Print('4')" class="btn" id="four" value="4"></td>
+                <td><input type="button" name="five" onclick="Print('5')" class="btn" id="five" value="5"></td>
+                <td> <input type="button" name="six" onclick="Print('6')" class="btn" id="six" value="6"> </td>
+                <td><input type="button" name="plus" onclick="Print('+')" class="btn" id="plus" value="&plus;"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" name="one" onclick="Print('1')" class="btn" id="one" value="1"> </td>
+                <td><input type="button" name="two" onclick="Print('2')" class="btn" id="two" value="2"></td>
+                <td><input type="button" name="three" onclick="Print('3')" class="btn" id="three" value="3"></td>
+                <td><input type="button" name="minus" onclick="Print('-')" class="btn" id="minus" value="&minus;"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" name="zz" onclick="Print('00')" class="btn" id="zz" value="00"></td>
+                <td><input type="button" name="z" onclick="Print('0')" class="btn" id="z" value="0"></td>
+                <td><input type="button" name="dot" onclick="Print('.')" class="btn" id="dot" value="."></td>
+                <td><input type="button" name="equalto" onclick="Solve()" class="btn" id="equalto" value="&equals;">
+                </td>
+            </tr>
+
+        </table>
+    </center>
+
+    <footer>
+        <marquee class="sud">- Designed By SUDHANSHU BARNWAL</marquee><br><br><br>
+    </footer>
+
+    <script>
+        function Print(x) {
+            document.getElementById('que').value += x;
+        }
+
+        function C() {
+            document.getElementById('que').value = '';
+            document.getElementById('ans').value = '= ';
+        }
+
+        function Solve() {
+            document.getElementById('ans').value = '= ' + eval(document.getElementById('que').value);
+
+            if (document.getElementById('que').value == '') {
+                alert('Enter some value in Your Query textbox for calculation.');
+            }
+
+        }
+
+        //Backspace Function
+        function Bs() {
+
+            var v = document.getElementById('que').value;
+
+            document.getElementById('que').value =
+                v.substr(0, v.length - 1);
+        }
+    </script>
+
+    <script src="nav.js"></script>
+</body>
+
+</html>

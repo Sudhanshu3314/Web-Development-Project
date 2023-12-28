@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Visit Some interesting websites. This is Sudhanshu's Personal Website you all can different website which is created by Sudhanshu for useful purpose">
+    <meta name="keywords" content="ERROR, Portfolio, Visit Handmade Websites, Websites">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="author" content="Sudhanshu Barnwal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Calculator</title>
+    <style>
+        .lab {
+            display: inline-block;
+            margin: 15px 45px;
+            font-size: 27px;
+            color: #FF1A1A;
+        }
+
+        .tit {
+            color: blue;
+            text-shadow: 0 0 20px black;
+            font-size: 40px;
+            font-family: cursive;
+            font-weight: 1000;
+        }
+
+        body {
+            text-align: center;
+            background-image: url("space.jpg");
+            background-size: 360px 840px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .btncal {
+            margin-right: 25px;
+            margin-top: 15px;
+            outline: none;
+            border-radius: 25px;
+            border: 6px solid #EFDA08;
+            color: red;
+            font-family: georgia;
+            font-weight: 800;
+            padding: 8px 12px;
+            background-color: beige;
+            font-size: 25px;
+        }
+
+        .btncal:hover {
+            color: white;
+            background-color: red;
+        }
+
+        .btnclr {
+            padding: 8px 12px;
+            margin-left: 25px;
+            margin-top: 15px;
+            outline: none;
+            border-radius: 25px;
+            border: 6px solid #EFDA08;
+            color: red;
+            font-family: georgia;
+            font-weight: 800;
+            background-color: beige;
+            font-size: 25px;
+        }
+
+        .btnclr:hover {
+            color: white;
+            background-color: red;
+        }
+
+        .tab {
+            border: 3px solid brown;
+            background-color: floralwhite;
+            width: 460px;
+            border-radius: 30px;
+        }
+
+        .inp {
+            outline: none;
+            border-radius: 20px;
+            border: 3px solid #8B00C3;
+            color: brown;
+            font-family: georgia;
+            font-weight: 800;
+            width: 380px;
+            font-size: 27px;
+            padding: 7px 9px;
+        }
+
+        .note {
+            box-shadow: 0 0 24px black;
+            background-color: #F3FFFB;
+            margin: 20px auto;
+            font-weight: 600;
+            word-spacing: 2px;
+            font-family: georgia;
+            font-size: 12px;
+            padding: 4px 8px;
+            border: 3.5px double #FF0000;
+            padding: 15px;
+            width: 440px;
+            border-radius: 25px;
+            transition: all 1.5s;
+        }
+
+        #res {
+            color: brown;
+            font-weight: 900;
+            font-family: georgia;
+        }
+
+        #head {
+            color: darkblue;
+            font-family: georgia;
+            font-weight: 900;
+        }
+
+        @media (max-width:550px) and (min-width:300px) {
+            .inp {
+                width: 200px;
+                padding: 3px 10px;
+                font-size: 18px;
+            }
+
+            .tab {
+                width: 280px;
+            }
+
+            .lab {
+                margin: 6px 17px;
+                font-size: 20px;
+            }
+
+            .btncal {
+                padding: 5px;
+                font-size: 20px;
+            }
+
+            .note {
+                width: 250px;
+                font-size: 10px;
+                padding: 9px;
+            }
+
+            .btnclr {
+                font-size: 20px;
+                padding: 5px;
+            }
+
+            .tit {
+                font-size: 21px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" href="error.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body bgcolor="aliceblue" align="center">
+    <div class="up">
+        <label id="menu"><i class='bx bx-menu'></i> </label>
+        <b> <u>POWER</u>&nbsp; <u>CALCULATOR</u></b>
+    </div>
+
+    <nav class="sidebar">
+        <div class="nav">
+            <ul>
+                <li><a href="index.html"><i class='bx bxs-home'></i> Home <i class='bx bxs-home'></i></a>
+                </li>
+
+                <li><a href="mahbooks.html"><i class='bx bxs-book'></i> Maharastra Books <i
+                            class='bx bxs-book'></i></a>
+                </li>
+
+                <li><a href="bmicalci.html"> <i class='bx bx-dumbbell'></i> BMI Calculator <i
+                            class='bx bx-dumbbell'></i></a></li>
+
+                <li><a href="mencalci.html"><i class='bx bx-cube'></i> Mensuration Calculator <i
+                            class='bx bxs-traffic-cone'></i></a></li>
+
+                <li><a href="calci.html"><i class='bx bxs-calculator'></i> Calculator <i
+                            class='bx bxs-calculator'></i></a></li>
+
+                <li><a href="discalci.html"><i class='bx bxs-discount'></i> Discount Calculator <i
+                            class='bx bxs-discount'></i></a></li>
+
+                <li><a href="gstcalci.html"><i class='bx bx-rupee'></i> GST Calculator <i
+                            class='bx bx-rupee'></i></a>
+                </li>
+
+                <li><a href="powcalci.html"><i class='bx bxs-square'></i> Power Calculator <i
+                            class='bx bxs-square'></i></a></li>
+
+                <li><a href="pahada.html"><i class='bx bx-table'></i> Pahada(Table) <i
+                            class='bx bx-table'></i></a></li>
+
+                <li><a href="sscres.html"><i class='bx bxs-school'></i> ERROR&#12484;SD
+                        10<sup>th</sup>Result <i class='bx bxs-school'></i></a></li>
+
+                <li><a href="hscres.html"><i class='bx bx-book-reader'></i> ERROR&#12484;SD
+                        12<sup>th</sup>Result <i class='bx bx-book-reader'></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <br><br><br>
+    <h1 class="tit">&star; <u>Powering all numbers</u> &star;</h1>
+    <br><br>
+    <form action="backend.php" method="get" accept-charset="utf-8">
+        <center>
+            <table align="center" class="tab">
+                <tr>
+                    <td>
+                        <label class="lab">
+                            Enter number (Originate):- <input autocomplete="off" class="inp" type="number" name="stnum"
+                                id="stnum" placeholder=" Starting Number..........">
+                        </label>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="note">
+                <u>Note</u>:- Enter the Originate number greater than Terminating Number. Otherwise, Loop will not run
+                and you all will unable to get you Calculations as per your requirement.
+            </div>
+
+            <table align="center" class="tab">
+                <tr>
+                    <td>
+                        <label class="lab">
+                            Enter number (Terminate):- <input autocomplete="off" class="inp" type="number" name="num"
+                                placeholder=" Terminating No........." id="num">
+                        </label>
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <table align="center" class="tab">
+                <tr>
+                    <td>
+                        <label class="lab">
+                            Enter Power :- <input autocomplete="off" class="inp" type="number" name="pow"
+                                placeholder=" Power..........." id="pow">
+                        </label>
+                    </td>
+                </tr>
+            </table>
+
+            <input type="button" value="Calculate" class="btncal" onclick="Cal()">
+
+            <input type="button" value="Clear" class="btnclr" onclick="Clr()">
+
+    </form>
+    <br><br>
+    <h3 Id="head"></h3><br>
+    <h3 Id="res"></h3><br><br>
+    </center>
+    <a href="#"><i id="chevup" class='bx bx-chevron-up'></i></a>
+    <br><br>
+
+    <script>
+        // function of Calculations
+        function Cal() {
+            var snum, sno, num, no, p, pow, i;
+            snum = document.getElementById('stnum').value;
+            sno = parseInt(snum);
+
+            num = document.getElementById('num').value;
+            no = parseInt(num);
+
+            pow = document.getElementById('pow').value;
+            p = parseFloat(pow);
+
+            document.getElementById('head').innerHTML = "<table align=center style=border-radius:13px;background-color:aliceblue><tr><td><u style=color:darkblue;> Degree of " + p + " is given to<br>the numbers from " + sno + " to " + no + ".</u></td></tr></table><br>";
+
+            for (i = sno; i <= no; i++) {
+                res = Math.pow(i, p);
+                document.getElementById('res').innerHTML += "<table align=center style=border-radius:13px;background-color:aliceblue><tr><td><b style=color:brown;>" + '(' + i + ')' + "<sup>" + p + "</sup> = " + res + "</b></td></tr></table><br><br>";
+            }
+
+            if (snum == "" || pow == "" || num == "") {
+                alert("You didn't Enter the value in Textbox.");
+                document.getElementById('head').innerHTML = "";
+                document.getElementById('res').innerHTML = "";
+            }
+            else if (no < sno) {
+                alert("Please !! Read the given NOTE carefully.");
+                document.getElementById('head').innerHTML = "";
+                document.getElementById('stnum').value = document.getElementById('num').value = '';
+
+            }
+        }
+
+        // function of Clear button
+        function Clr() {
+            document.getElementById('head').innerHTML = "";
+            document.getElementById('res').innerHTML = "";
+            document.getElementById("pow").value = document.getElementById("num").value = "";
+            document.getElementById('stnum').value = "";
+        }
+    </script>
+    <script src="nav.js"></script>
+</body>
+
+</html>

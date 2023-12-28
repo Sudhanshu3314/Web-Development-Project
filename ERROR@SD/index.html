@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Visit Some interesting websites. This is Sudhanshu's Personal Website you all can different website which is created by Sudhanshu for useful purpose">
+    <meta name="keywords" content="ERROR, Portfolio, Visit Handmade Websites, Websites">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="author" content="Sudhanshu Barnwal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERROR&#12484;SD</title>
+    <style>
+        #box {
+            background-color: white;
+            color: black;
+            border-radius: 60px;
+            box-shadow: 0px 0px 35px 10px white;
+            max-width: 1100px;
+            box-sizing: border-box;
+            height: 550px;
+            margin: -720px auto;
+        }
+
+        footer {
+            position: absolute;
+            bottom: -640px;
+            padding: 40px 50px 30px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: white;
+            left: 0px;
+        }
+
+        .box {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body::before {
+            background: url("https://media.istockphoto.com/photos/neon-lights-lens-flare-space-light-black-background-picture-id1136854470?b=1&k=20&m=1136854470&s=170667a&w=0&h=Y8CpObEjhgKJw3szfU4-Mi1qTpJIYN8omYS36173ah8=") no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 160%;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+        }
+
+        footer img {
+            width: 100px;
+            border-radius: 100%;
+            height: 100px;
+            box-shadow: 0px 0px 6px .4px black;
+        }
+
+        footer img:hover {
+            box-shadow: 0px 0px 20px 2px black;
+        }
+
+        .grid {
+            display: grid;
+            justify-content: center;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            grid-template-columns: repeat(2, 500px);
+        }
+
+        footer t {
+            font-size: 50px;
+            font-family: 'Rubik Moonrocks';
+            font-weight: 900;
+        }
+
+        #ab {
+            grid-column: 2 / span 1;
+            grid-row: 3 / span 3;
+            text-align: center;
+            padding: 0px 10px;
+            font-size: 24px;
+            box-sizing: border-box;
+        }
+
+        footer a {
+            color: black;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        footer b {
+            font-size: 36px;
+        }
+
+        .end {
+            background-color: black;
+            color: white;
+            position: absolute;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 25px;
+            left: 0px;
+            width: 100%;
+        }
+
+        .aboutme {
+            font-size: 45px;
+            padding-top: 60px;
+            padding-left: 140px;
+            display: inline-block;
+            font-weight: 390;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        img[alt="My Photo"] {
+            width: 195px;
+            height: 360px;
+            float: right;
+            margin-top: -400px;
+            margin-left: 90px;
+        }
+
+        .aboutme span {
+            font-size: 25px;
+        }
+
+        .socialmedia {
+            display: flex;
+            justify-content: center;
+        }
+
+        .socialmedia ul {
+            list-style-type: none;
+            width: 70%;
+            display: flex;
+            margin-top: 0px;
+            align-items: center;
+            padding-left: 6px;
+            justify-content: space-evenly;
+        }
+
+        #whatsapp {
+            font-size: 5em;
+            color: green;
+            border-radius: 20px;
+        }
+
+        #youtube {
+            font-size: 5em;
+            border-radius: 80px;
+            color: red;
+        }
+
+        #whatsapp:hover {
+            background-color: green;
+            color: white;
+            box-shadow: 0px 0px 18px black;
+        }
+
+        #youtube:hover {
+            background-color: red;
+            color: white;
+            box-shadow: 0px 0px 18px black;
+        }
+
+        .media {
+            width: 62px;
+            height: 62px;
+            border-radius: 17px;
+        }
+
+        #gmail {
+            width: 69px;
+            height: 59px;
+        }
+
+        .media:hover {
+            box-shadow: 0px 0px 18px black;
+        }
+
+        #gmail:hover {
+            box-shadow: 0px 0px 18px black;
+        }
+
+        hr {
+            width: 830px;
+        }
+
+        .typing-effect {
+            width: 21ch;
+            white-space: nowrap;
+            border-right: 0.4rem solid darkred;
+            font-size: 3rem;
+            font-weight: bolder;
+            color: red;
+            overflow: hidden;
+            animation: typing 5s steps(17) infinite alternate, effect 8s step-end infinite alternate;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0px;
+            }
+        }
+
+        @keyframes effect {
+            100% {
+                border-color: transparent;
+            }
+        }
+
+        .te-fwd {
+            width: 24ch;
+            white-space: nowrap;
+            display: inline-block;
+            padding-left: 10px;
+            border-right: 0.4rem solid darkred;
+            font-size: 1.6rem;
+            position: relative;
+            top: 6.3px;
+            font-weight: bolder;
+            color: red;
+            overflow: hidden;
+            animation: tfwd 9s steps(19) infinite alternate, efwd 12s step-end infinite alternate;
+        }
+
+        @keyframes tfwd {
+            from {
+                width: 0px;
+            }
+        }
+
+        @keyframes efwd {
+            99% {
+                border-color: transparent;
+            }
+        }
+
+        @media (max-width:1250px) and (min-width:800px) {
+
+            body::before {
+                background: url("https://media.istockphoto.com/photos/neon-lights-lens-flare-space-light-black-background-picture-id1136854470?b=1&k=20&m=1136854470&s=170667a&w=0&h=Y8CpObEjhgKJw3szfU4-Mi1qTpJIYN8omYS36173ah8=") no-repeat center center/cover;
+                height: 180%;
+            }
+
+            #box {
+                max-width: 600px;
+                height: 400px;
+                border-radius: 50px;
+                box-shadow: 0px 0px 44px 15px black;
+                margin: -700px auto;
+            }
+
+            .box {
+                width: 340px;
+            }
+
+            footer t {
+                font-size: 33px;
+            }
+
+            footer b {
+                font-size: 22px;
+            }
+
+            footer img {
+                width: 65px;
+                height: 65px;
+            }
+
+            footer a {
+                font-size: 17px;
+            }
+
+            #ab {
+                font-size: 17px;
+            }
+
+            .typing-effect {
+                font-size: 2rem;
+            }
+
+            .te-fwd {
+                font-size: 1.3rem;
+                padding-left: 4px;
+                padding-right: 9px;
+                top: 4.3px;
+            }
+
+            .end {
+                font-size: 16px;
+            }
+
+            footer {
+                padding: 30px 50px 30px;
+                bottom: -600px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 340px);
+            }
+
+            .aboutme {
+                font-size: 30px;
+                padding-top: 60px;
+                padding-left: 35px;
+            }
+
+            img[alt="My Photo"] {
+                width: 110px;
+                height: 215px;
+                margin-top: -240px;
+            }
+
+            .aboutme span {
+                font-size: 20px;
+            }
+
+            #whatsapp {
+                font-size: 3.5em;
+            }
+
+            #youtube {
+                font-size: 3.5em;
+            }
+
+            .media {
+                width: 44px;
+                height: 44px;
+            }
+
+            #gmail {
+                width: 50px;
+                height: 40px;
+            }
+
+            hr {
+                width: 540px;
+            }
+        }
+
+        @media (max-width:800px) and (min-width:400px) {
+            #box {
+                max-width: 350px;
+                height: 215px;
+                margin: -600px auto;
+                border-radius: 40px;
+                box-shadow: 0px 0px 44px 15px black;
+            }
+
+            .typing-effect {
+                font-size: 1rem;
+                border-right: 0.25rem solid darkred;
+            }
+
+            .te-fwd {
+                font-size: 0.7rem;
+                border-right: 0.25rem solid darkred;
+                padding-left: 1px;
+                padding-right: 5px;
+                top: 2px;
+            }
+
+            body::before {
+                background: url("https://media.istockphoto.com/photos/neon-lights-lens-flare-space-light-black-background-picture-id1136854470?b=1&k=20&m=1136854470&s=170667a&w=0&h=Y8CpObEjhgKJw3szfU4-Mi1qTpJIYN8omYS36173ah8=") no-repeat center center/cover;
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 130%;
+                top: 0px;
+                left: 0px;
+                z-index: -1;
+            }
+
+            .box {
+                width: 170px;
+            }
+
+            footer t {
+                font-size: 27px;
+            }
+
+            footer b {
+                font-size: 22px;
+            }
+
+            footer img {
+                width: 50px;
+                height: 50px;
+            }
+
+            footer a {
+                font-size: 13px;
+            }
+
+            #ab {
+                font-size: 11px;
+            }
+
+            .end {
+                font-size: 13px;
+            }
+
+            footer {
+                padding: 30px 50px 30px;
+                bottom: -280px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 170px);
+            }
+
+            .aboutme {
+                font-size: 15px;
+                padding-top: 40px;
+                padding-left: 35px;
+            }
+
+            img[alt="My Photo"] {
+                width: 50px;
+                height: 92px;
+                margin-top: -110px;
+            }
+
+            .aboutme span {
+                font-size: 10px;
+            }
+
+            #whatsapp {
+                font-size: 2em;
+            }
+
+            #instagram {
+                font-size: 2em;
+            }
+
+            #youtube {
+                font-size: 2em;
+            }
+
+            .media {
+                width: 31px;
+                height: 31px;
+            }
+
+            #gmail {
+                width: 32px;
+                height: 26px;
+            }
+
+            hr {
+                width: 275px;
+            }
+        }
+
+        @media (max-width:400px) and (min-width:300px) {
+            #box {
+                max-width: 260px;
+                height: 215px;
+                border-radius: 30px;
+                margin: -383px auto;
+                box-shadow: 0px 0px 33px 9px white;
+            }
+
+            .box {
+                width: 130px;
+            }
+
+            footer t {
+                font-size: 20px;
+            }
+
+            footer b {
+                font-size: 16px;
+            }
+
+            footer img {
+                width: 40px;
+                height: 40px;
+            }
+
+            footer a {
+                font-size: 10px;
+            }
+
+            #ab {
+                font-size: 9px;
+            }
+
+            body::before {
+                background: url("https://media.istockphoto.com/photos/neon-lights-lens-flare-space-light-black-background-picture-id1136854470?b=1&k=20&m=1136854470&s=170667a&w=0&h=Y8CpObEjhgKJw3szfU4-Mi1qTpJIYN8omYS36173ah8=") no-repeat fixed center/cover;
+                height: 120%;
+            }
+
+            .end {
+                font-size: 10px;
+            }
+
+            footer {
+                padding: 20px 20px 25px;
+                bottom: -150px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 130px);
+            }
+
+            .aboutme {
+                font-size: 15px;
+                padding-top: 40px;
+                padding-left: 21px;
+            }
+
+            img[alt="My Photo"] {
+                width: 50px;
+                height: 92px;
+                margin-top: -115px;
+            }
+
+            .aboutme span {
+                font-size: 10px;
+            }
+
+            #whatsapp {
+                font-size: 1.8em;
+            }
+
+            .typing-effect {
+                font-size: 0.9rem;
+                border-right: 0.1rem solid darkred;
+            }
+
+            .te-fwd {
+                font-size: 0.59rem;
+                border-right: 0.13rem solid darkred;
+                padding-left: 1px;
+                padding-right: 4px;
+                top: 2px;
+            }
+
+            #youtube {
+                font-size: 1.8em;
+            }
+
+            .media {
+                width: 25px;
+                height: 25px;
+            }
+
+            #gmail {
+                width: 27px;
+                height: 23px;
+            }
+
+            hr {
+                width: 230px;
+            }
+        }
+    </style>
+    <link rel="icon" width="16px" height="16px" href="icon.jpg">
+    <link rel="stylesheet" href="commonc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href='https://fonts.googleapis.com/css?family=Rubik Moonrocks' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="top">
+        <label id="menu"><i class='bx bx-menu'></i> </label>
+        <b> <img src="error.jpg" alt="My Logo"> &nbsp; <u>DEVELOPER</u> &nbsp; <img src="error.jpg" alt="My Logo">
+        </b>
+    </div>
+
+    <nav class="sidebar">
+        <div class="nav">
+            <ul>
+                <li><a href="index.html"><i class='bx bxs-home'></i> Home <i class='bx bxs-home'></i></a>
+                </li>
+
+                <li><a href="mahbooks.html"><i class='bx bxs-book'></i> Maharastra Books <i
+                            class='bx bxs-book'></i></a>
+                </li>
+
+                <li><a href="bmicalci.html"> <i class='bx bx-dumbbell'></i> BMI Calculator <i
+                            class='bx bx-dumbbell'></i></a></li>
+
+                <li><a href="mencalci.html"><i class='bx bx-cube'></i> Mensuration Calculator <i
+                            class='bx bxs-traffic-cone'></i></a></li>
+
+                <li><a href="calci.html"><i class='bx bxs-calculator'></i> Calculator <i
+                            class='bx bxs-calculator'></i></a></li>
+
+                <li><a href="discalci.html"><i class='bx bxs-discount'></i> Discount Calculator <i
+                            class='bx bxs-discount'></i></a></li>
+
+                <li><a href="gstcalci.html"><i class='bx bx-rupee'></i> GST Calculator <i
+                            class='bx bx-rupee'></i></a>
+                </li>
+
+                <li><a href="powcalci.html"><i class='bx bxs-square'></i> Power Calculator <i
+                            class='bx bxs-square'></i></a></li>
+
+                <li><a href="pahada.html"><i class='bx bx-table'></i> Pahada(Table) <i
+                            class='bx bx-table'></i></a></li>
+
+                <li><a href="sscres.html"><i class='bx bxs-school'></i> ERROR&#12484;SD
+                        10<sup>th</sup>Result <i class='bx bxs-school'></i></a></li>
+
+                <li><a href="hscres.html"><i class='bx bx-book-reader'></i> ERROR&#12484;SD
+                        12<sup>th</sup>Result <i class='bx bx-book-reader'></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <div id="home">
+
+        <div id="box">
+            <div class="aboutme">
+                <div class="content">Hii I'm <div class="typing-effect">
+                        SUDHANSHU BARNWAL
+                    </div><br>
+                    <span>I'm a <div class="te-fwd">FRONT-END WEB DEVELOPER
+                        </div>
+                    </span><br>
+                    <span> I have experience since from 1 year <br> in this Web development.
+                    </span>
+                </div>
+                <hr>
+                <div class="myimg" onclick="Myvoic()"><img src="sud.jpeg" alt="My Photo"></div>
+            </div>
+
+            <div class="socialmedia">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/sudhanshu-barnwal-9b6125235"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdXlmZ0IcWztV6MkudJ9nF4BYx6UHVWpWduA&usqp=CAU"
+                                class="media"></a></li>
+                    <li><a href="" onclick="Chat()"><i Id="whatsapp" class="fa fa-whatsapp"></i></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com/@tech_tank"><i Id="youtube" class="fa fa-youtube-play"></i></a>
+                    </li>
+
+
+                    <li><a href="https://instagram.com/indian_sudhxnshu?utm_medium=copy_link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                                class="media">
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="grid">
+            <div class="box">
+                <img src="fauji.jpg" onclick="Myvoic()">
+            </div>
+            <div class="box">
+                <t>ERROR&#12484;SD</t>
+            </div>
+            <div class="box"><b>Quick Links</b></div>
+            <div class="box"><b>About</b></div>
+            <div class="box"><a href="">About Us</a></div>
+            <div class="box" id="ab">Have a look of some fascinating websites by clicking on the three lines which is
+                just at the top-left side.</div>
+            <div class="box"><a href="" onclick="Chat()">Contact Us</a></div>
+            <div class="box"><a href="">Terms and Conditions</a></div>
+        </div>
+        <div class="end">&copy; ERROR&#12484;SD 2022</div>
+    </footer>
+
+    <b id="play" style="display: none;"></b>
+    <script src="nav.js"> </script>
+</body>
+
+</html>

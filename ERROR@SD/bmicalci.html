@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Visit Some interesting websites. This is Sudhanshu's Personal Website you all can different website which is created by Sudhanshu for useful purpose">
+    <meta name="keywords" content="ERROR, Portfolio, Visit Handmade Websites, Websites">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="author" content="Sudhanshu Barnwal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            background: url("https://lh3.googleusercontent.com/4GWpR1Oqyn46uXc-rRNpZQJUJ0djvxS8eD8Tn93kp_YIa8nUII9nDYj6Bj6k9VjuurwYyj8e2yWP59iStkbh42I5L4JR3Bmvi-nyGA=w600") fixed center;
+            background-size: 100% 140%;
+        }
+
+        .heading {
+            font-family: georgia;
+            font-size: 80px;
+            color: brown;
+            font-weight: bold;
+        }
+
+        .n {
+            width: 300px;
+            height: 55px;
+            padding: 12px 18px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-family: georgia;
+            color: brown;
+            font-size: 35px;
+            border: 5px solid red;
+            background-color: lightyellow;
+            outline: none;
+        }
+
+        .t {
+            width: 420px;
+            height: 55px;
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: georgia;
+            color: brown;
+            font-size: 35px;
+            border: 5px solid red;
+            background-color: lightyellow;
+            outline: none;
+        }
+
+        .b {
+            font-size: 50px;
+            font-family: georgia;
+            color: darkblue;
+        }
+
+        .bt {
+            width: 355px;
+            height: 105px;
+            border-radius: 25px;
+            border: 8px solid red;
+            font-size: 60px;
+            margin: 0px 14px 20px;
+            background-color: ivory;
+            font-family: georgia;
+            font-weight: bold;
+            position: relative;
+            bottom: 20px;
+            color: green;
+        }
+
+        .bt:hover {
+            border: 8px solid green;
+            color: red;
+        }
+
+        table,
+        tr,
+        td {
+            border-color: greenyellow;
+            border-radius: 35px;
+            width: 940px;
+            height: 160px;
+        }
+
+        #bmi {
+            font-size: 70px;
+            font-family: georgia;
+            font-weight: bold;
+            color: darkmagenta;
+        }
+
+        #ex {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: georgia;
+            color: blue;
+        }
+
+        label {
+            margin: 30px auto;
+            display: block;
+        }
+
+        .sud {
+            font-family: georgia;
+            font-size: 40px;
+            color: aliceblue;
+            background-color: brown;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .up {
+            height: 100px;
+        }
+
+        .up b {
+            position: relative;
+            bottom: 30px;
+        }
+
+        form {
+            padding: 10px 30px;
+        }
+
+        table {
+            padding: 24px;
+        }
+
+        @media (max-width:1000px) and (min-width:600px) {
+            td {
+                font-size: 40px;
+                padding: 10px;
+            }
+
+            #bmi {
+                font-size: 37px;
+            }
+
+            #ex {
+                font-size: 32px;
+            }
+
+            table {
+                width: 500px;
+                padding: 12px;
+            }
+
+            table,
+            tr,
+            td {
+                height: 140px;
+            }
+
+            .sud {
+                font-size: 20px;
+            }
+
+            .bt {
+                font-size: 25px;
+                width: 150px;
+                height: 50px;
+            }
+
+            .b {
+                font-size: 24px;
+            }
+
+            .t {
+                font-size: 22px;
+                padding: 7px 10px;
+                width: 250px;
+            }
+
+            form {
+                padding: 3px;
+            }
+
+            .n {
+                font-size: 22px;
+                padding: 7px 10px;
+                width: 180px;
+            }
+        }
+
+        @media (max-width:600px) and (min-width:400px) {
+            td {
+                font-size: 30px;
+                padding: 2px;
+            }
+
+            #bmi {
+                font-size: 30px;
+            }
+
+            #ex {
+                font-size: 25px;
+            }
+
+            form {
+                padding: 1px;
+            }
+
+            div.up {
+                height: 60px;
+            }
+
+            table {
+                width: 370px;
+                padding: 7px;
+            }
+
+            .sud {
+                font-size: 20px;
+            }
+
+            .bt {
+                font-size: 20px;
+                width: 120px;
+                height: 50px;
+                margin: 10px;
+            }
+
+            label {
+                font-size: 17px;
+            }
+
+            .b {
+                font-size: 22px;
+            }
+
+            table,
+            tr,
+            td {
+                height: 100px;
+            }
+
+            .t {
+                font-size: 16px;
+                width: 170px;
+                height: 36px;
+                border: 4px solid red;
+                padding: 3px;
+                border-radius: 10px;
+            }
+
+            .n {
+                border: 4px solid red;
+                border-radius: 10px;
+                font-size: 16px;
+                width: 126px;
+                padding: 3px;
+                height: 36px;
+            }
+        }
+
+        @media (max-width:400px) and (min-width:310px) {
+            td {
+                font-size: 27px;
+                padding: 2px;
+            }
+
+            form {
+                padding: 1px;
+            }
+
+            div.up {
+                height: 60px;
+            }
+
+            table {
+                width: 310px;
+                padding: 7px;
+            }
+
+            .sud {
+                font-size: 20px;
+            }
+
+            #bmi {
+                font-size: 25px;
+            }
+
+            #ex {
+                font-size: 20px;
+            }
+
+            .bt {
+                font-size: 18px;
+                width: 115px;
+                height: 50px;
+                margin: 5px;
+            }
+
+            label {
+                font-size: 7px;
+            }
+
+            .b {
+                font-size: 13px;
+            }
+
+            table,
+            tr,
+            td {
+                height: 100px;
+            }
+
+            .t {
+                font-size: 17px;
+                width: 175px;
+                height: 36px;
+                border: 4px solid red;
+                padding: 3px;
+                border-radius: 10px;
+            }
+
+            .n {
+                border: 4px solid red;
+                border-radius: 10px;
+                font-size: 16px;
+                width: 122px;
+                padding: 3px;
+                height: 36px;
+            }
+
+            input[placeholder="Height (ft)"] {
+                width: 106px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" href="error.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body align="center">
+    <div class="up">
+        <label id="menu"><i class='bx bx-menu'></i> </label>
+        <b> <u>BMI</u>&nbsp; <u>CALCULATOR</u></b>
+    </div>
+
+    <nav class="sidebar">
+        <div class="nav">
+            <ul>
+                <li><a href="index.html"><i class='bx bxs-home'></i> Home <i class='bx bxs-home'></i></a>
+                </li>
+
+                <li><a href="mahbooks.html"><i class='bx bxs-book'></i> Maharastra Books <i
+                            class='bx bxs-book'></i></a>
+                </li>
+
+                <li><a href="bmicalci.html"> <i class='bx bx-dumbbell'></i> BMI Calculator <i
+                            class='bx bx-dumbbell'></i></a></li>
+
+                <li><a href="mencalci.html"><i class='bx bx-cube'></i> Mensuration Calculator <i
+                            class='bx bxs-traffic-cone'></i></a></li>
+
+                <li><a href="calci.html"><i class='bx bxs-calculator'></i> Calculator <i
+                            class='bx bxs-calculator'></i></a></li>
+
+                <li><a href="discalci.html"><i class='bx bxs-discount'></i> Discount Calculator <i
+                            class='bx bxs-discount'></i></a></li>
+
+                <li><a href="bmicalci.html"><i class='bx bx-rupee'></i> BMI Calculator <i
+                            class='bx bx-rupee'></i></a>
+                </li>
+
+                <li><a href="powcalci.html"><i class='bx bxs-square'></i> Power Calculator <i
+                            class='bx bxs-square'></i></a></li>
+
+                <li><a href="pahada.html"><i class='bx bx-table'></i> Pahada(Table) <i
+                            class='bx bx-table'></i></a></li>
+
+                <li><a href="sscres.html"><i class='bx bxs-school'></i> ERROR&#12484;SD
+                        10<sup>th</sup>Result <i class='bx bxs-school'></i></a></li>
+
+                <li><a href="hscres.html"><i class='bx bx-book-reader'></i> ERROR&#12484;SD
+                        12<sup>th</sup>Result <i class='bx bx-book-reader'></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <br><br><br>
+    <center>
+        <table align="center" bgcolor="aliceblue" border="5">
+            <tr height="180" class="heading">
+                <td>
+                    &star; <u>BMI</u> <u>Calculator</u> &star;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form name="f1">
+
+                        <label><b class="b">Enter Name :-</b> <input type="text" class="t" Id="name" autocomplete="off"
+                                placeholder="Enter your Name....................">
+                        </label>
+                        <label><b class="b">Enter Mass :-</b> <input autocomplete="off" type="number" class="n"
+                                name="n1" placeholder="Mass (kg)"><b class="b"> kg</b>
+                        </label>
+                        <label><b class="b">Enter Height :-</b> <input autocomplete="off" type="number" class="n"
+                                name="n2" placeholder="Height (ft)"><b class="b"> ft</b><input type="number" class="n"
+                                name="n3" placeholder="Height(inch)"><b class="b"> inch</b>
+                        </label>
+                        <br>
+                        <center>
+                            <input type="button" value="Clear" onclick="Clr()" class="bt">
+
+                            <input type="button" value="Calculate" onclick="Com()" class="bt">
+                        </center>
+                    </form>
+                    <center>
+                        <h1 Id="bmi"></h1>
+                        <h1 Id="ex"></h1>
+                    </center>
+
+                    <marquee class="sud">- Designed By Sudhanshu Barnwal </marquee><br>
+                    <br>
+            </tr>
+            </td>
+        </table>
+    </center>
+    <a href="#"><i id="chevup" class='bx bx-chevron-up'></i></a>
+
+    <br><br>
+
+    <script type="text/javascript">
+        //Compute Function
+        function Com() {
+            var n, x, b;
+            n = document.getElementById("name").value.toUpperCase();
+            x = 30 * parseFloat(f1.n2.value) + parseFloat(f1.n3.value) * 2.5;
+            b = parseFloat(f1.n1.value) / Math.pow(x / 100, 2);
+            document.getElementById("bmi").innerHTML = "<hr color=brown>" + n + " your Body Mass Index (BMI) is " + b + ".";
+
+            if (b <= 16) {
+                document.getElementById("ex").innerHTML = "<hr color=brown><u>Precautions</u> :- You are in the category of Severely Underweight.<br> So, Your body needs abundant amount of some healthy foods not any junk foods.<hr color=brown>";
+            }
+            else if (b >= 16 && b <= 18.5) {
+                document.getElementById("ex").innerHTML = "<hr color=brown><u>Precautions</u> :- You are in the category of Underweight.<br> So, Your body needs minimum amount of some healthy foods for balance your diet but don't eat any junk foods.<hr color=brown> ";
+            }
+            else if (b >= 18.5 && b <= 25) {
+                document.getElementById("ex").innerHTML = "<hr color=brown><b style=color:red>No precaution, because you are in the category of Normal human being.<br> It means that you are healthy but, it doesn't mean that you will eat junk foods & also do regular Surya namaskar for maintaining this good health.</b><br>Remember that, <u>Health is Wealth.</u><hr color=brown> ";
+            }
+            else if (b >= 25 && b <= 30) {
+                document.getElementById("ex").innerHTML = "<hr color=brown><u>Precaution</u> :- You are in the category of Overweight.<br>So, you need to do exercise at 6:00 am in the morning only for 45 minutes & don't eat junk foods. <hr color=brown> ";
+            }
+            else if (b >= 30 && b <= 35) {
+                document.getElementById("ex").innerHTML = "<hr color=brown><u>Precaution</u> :- You are in the category of Moderately obese.<br>It means that you are too fat.<br>So, you need to do exercise & jogging at 6:00 am in the morning atleast 1 hours 30 minutes & don't eat junk foods. <hr color=brown> ";
+            }
+            else if (b >= 35 && b <= 40) {
+                document.getElementById("ex").innerHTML = "<hr color=brown><u>Precaution</u> :- You are in the category of Severely obese.<br>It means that you are too much fat.<br>So, you need to do exercise, jogging & cycling at 6:00 am in the morning atleast 2 hours & don't eat junk foods.<hr color=brown>";
+            }
+            else if (b >= 40) {
+                document.getElementById("ex").innerHTML = "<hr color=brown><u>Precaution</u> :- You are in the category of Morbidly obese.<br>It means that you are at that stage where a person can lead to death because of body fats.<br>So, you need to do exercise, jogging, swimming, skipping ,yoga & cycling at 5:30 am in the morning atleast 3 hours & don't eat junk foods.<br> There must be sweat from your body while doing this all activity.<hr color=brown>";
+            }
+            if (f1.n2.value == "" && f1.n3.value == "" && f1.n1.value == "") {
+                alert("Please !! Enter all the details in textbox for calculating your Body Mass Index(BMI).");
+                document.getElementById("bmi").innerHTML = "";
+                document.getElementById("ex").innerHTML = "";
+            }
+            else if (f1.n2.value == "" && f1.n3.value == "") {
+                alert("Please !! Enter your height in textbox for calculating your Body Mass Index(BMI).");
+                document.getElementById("bmi").innerHTML = "";
+                document.getElementById("ex").innerHTML = "";
+            }
+            else if (f1.n2.value == "" || f1.n3.value == "") {
+                alert("Please !! Enter your height properly in textbox for calculating your Body Mass Index(BMI).");
+                document.getElementById("bmi").innerHTML = "";
+                document.getElementById("ex").innerHTML = "";
+            }
+
+            else if (f1.n1.value == "") {
+                alert("Please !! Fill up your mass in textbox for calculating your Body Mass Index(BMI).");
+                document.getElementById("bmi").innerHTML = "";
+                document.getElementById("ex").innerHTML = "";
+            }
+        }
+
+        //Clear All Function
+        function Clr() {
+            document.getElementById("name").value = f1.n1.value = f1.n2.value = f1.n3.value = "";
+            document.getElementById("bmi").innerHTML = "";
+            document.getElementById("ex").innerHTML = "";
+        }
+
+    </script>
+    <script src="nav.js"></script>
+</body>
+
+</html>

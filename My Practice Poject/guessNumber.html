@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number Game</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 20px auto;
+            font-size: 26px;
+        }
+
+        input[type='number'] {
+            font-size: 23px;
+            border-radius: 20px;
+            padding: 5px 20px;
+            border: 2px solid red;
+            width: 180px;
+            margin: 10px auto;
+            outline: none;
+            box-shadow: 0px 0px 4px 1px blue;
+            outline: none;
+        }
+
+        input[type='button'] {
+            margin: 10px 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+            box-shadow: 0px 0px 1px .1px black;
+            font-size: 23px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: brown;
+            background-color: aliceblue;
+            transition: all 0.4s;
+        }
+
+        input[type="button"]:hover {
+            box-shadow: 0px 0px 10px 1px black;
+            transition: all .3s;
+            background-color: brown;
+            color: aliceblue;
+        }
+
+        .answer {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        label {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><u>Guess</u> <u>Number</u> <u>Game</u> </h1>
+    <form>
+        <label>
+            Enter anyone number <br> from 1 to 100 :- <br> <input type="number" name="num" id="num"
+                placeholder="1 to 100 Only......." autocomplete="off">
+        </label>
+        <input type="button" value="Clear" onclick="Clr()">
+        <input type="button" value="Check" onclick="Check()">
+
+    </form>
+    <h2 id="name"></h2>
+    <div class="answer"></div>
+
+    <script>
+
+        let naam;
+        function enterName() {
+            naam = prompt("Enter Your Name............")
+        }
+        enterName()
+
+        while (true) {
+            if (naam == "") {
+                alert("Please !! Enter Your Name.")
+                enterName()
+            }
+            if (naam != "") {
+                break
+            }
+        }
+
+        document.getElementById("name").innerHTML = "<hr><span style='color:darkred'>Now, " + naam.toUpperCase() + " is Playing</span><hr>"
+
+        speechSynthesis.speak(new SpeechSynthesisUtterance("Now," + naam + " is playing the game"));
+
+        let guess = (Math.floor(Math.random() * 100) + 1)
+        let answerDiv = document.querySelector(".answer")
+        let countGuess = 0
+        let winCount = 1
+
+        let number = document.getElementById("num")
+
+        function Check() {
+            let num = parseInt(number.value)
+
+            if (winCount == 0) {
+                alert("Now , Game is Cleared for Restarting the game")
+                location.reload() // This is for reload the webpage which can clear the all content of webpage so that game can restart
+                speechSynthesis.speak(new SpeechSynthesisUtterance("Now,Restarting the Game "));
+            }
+
+            if (num >= 1 && num <= 100) {
+                if (guess < num) {
+                    let ans = document.createElement("p")
+                    ans.innerHTML = (++countGuess) + ") <span style='color:red'>Try Again...</span><br>" + num + " Guessed Number Bada hai Original Number se.........."
+                    answerDiv.appendChild(ans)
+
+                    number.value = ""
+                }
+                else if (guess > num) {
+                    let ans = document.createElement("p")
+                    ans.innerHTML = (++countGuess) + ") <span style='color:red'>Try Again...</span><br>" + num + " Guessed Number Chota hai Original Number se.........."
+                    answerDiv.appendChild(ans)
+
+                    number.value = ""
+                }
+                else if (guess == num) {
+                    let score = 100 - countGuess
+
+                    winCount-- // Here , We have to stop the game after one time bcoz we have to start this game from starting onwards. So , now we have to tell the user to clear the program
+
+                    let ans = document.createElement("p")
+
+                    ans.innerHTML = "<hr><span style = 'color:red'>You Failed " + (countGuess) + " attempts </span> <br>" + "<span style = 'color:blue'>Now, You Guessed Correct Number i.e. " + num + "</span> <hr><span style='color:brown;font-weight:bold'> &rarr; Your Score : " + score + "</span><hr>"
+
+                    answerDiv.appendChild(ans)
+
+                    speechSynthesis.speak(new SpeechSynthesisUtterance("Congratulation, " + naam + " you guessed correct number and you have scored : " + score));
+
+                }
+            }
+            else if (number.value == "") {
+                alert("You Didn't Enter the value !!")
+            }
+            else {
+                let ans = document.createElement("p")
+                ans.innerHTML = (++countGuess) + ") <span style='color:red'>Try Again...</span><br>Dimag hai kii Bhusaa 1 se 100 ke beech mei Enter karne bola hai....."
+                answerDiv.appendChild(ans)
+
+                number.value = ""
+            }
+        }
+
+        function Clr() {
+                alert("Now , Game is Cleared for Restarting the game")
+                location.reload() // This is for reload the webpage which can clear the all content of webpage so that game can restart
+                speechSynthesis.speak(new SpeechSynthesisUtterance("Restarting the Game "));
+        }
+    </script>
+</body>
+
+</html>

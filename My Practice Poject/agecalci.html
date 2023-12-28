@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Sudhanshu Barnwal">
+    <meta name="keywords" content="calculator, age , age calculator , time , years , date of birth, month , date , seconds, minute , hours">
+    <meta name="description" content="Age calculator is created by Developer Sudhanshu Barnwal for getting information that how much time he/she live their life on Earth.">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <title>Age Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body::before{
+            background:url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg") no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 110%;
+            top: 0px;
+            left: 0px;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        .modal-body h4{
+            display: inline-block;
+            margin: 4px 6px;
+        }
+        .modal-body div{
+            margin: auto;
+        }
+        .time{
+            color: rgb(205, 16, 16);
+        }
+        input[name="dob"]{
+            font-size: 20px;
+            margin: 10px 30px;
+            border-radius: 10px;
+            padding: 5px 7px;
+        }
+        label{
+            font-size: 24px;
+            color: rgb(85, 0, 47);
+            font-weight: bold;
+            display: block;
+        }
+        .box{
+            border-top: 20px solid brown;
+            border-bottom: 20px solid brown;
+            border-right: 6px solid brown;
+            border-left: 6px solid brown;
+            padding: 30px 20px;
+            width:fit-content;
+            background-color: aliceblue;
+            border-radius: 40px;
+            display: block;
+            box-shadow: 0px 0px 40px black, 0px 0px 30px darkblue;
+            margin:120px auto;
+        }
+        .box h1{
+            margin: 0px auto 20px ;
+            font-size: 40px;
+            color: rgb(42, 16, 138);
+        }
+        .button{
+            display: inline-block;
+            margin: 25px 30px 5px;
+        }
+        input[type="button"]{
+            border-radius: 10px;
+            font-size:25px;
+            color: rgb(85, 0, 47);
+            font-weight: bold;
+            border: 3px dotted red;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        @media (max-width:760px) and (min-width:450px) {
+            input[name="dob"]{
+                font-size:15px;
+                margin: 10px 20px;
+                border-radius: 7px;
+                padding: 3px 5px;
+            }
+            label{
+                font-size:18px;
+            }
+            .box{
+                padding: 15px 10px;
+                border-radius: 30px;
+                margin: 70px auto;
+            }
+            .box h1{
+                font-size: 30px;
+            }
+            .button{
+                margin: 25px 10px 5px;
+            }
+            input[type="button"]{
+                font-size:20px;
+            }
+            
+        }
+        @media (max-width:450px) and (min-width:300px) {
+            body{
+                background:url("https://www.nawpic.com/media/2020/cool-backgrounds-nawpic-e1605814432990.jpg") no-repeat center center/cover;
+            }
+            input[name="dob"]{
+                font-size:14px;
+            }
+            label{
+                font-size:16px;
+            }
+            .box{
+                padding: 15px 10px;
+                border-radius: 30px;
+            }
+            .box h1{
+                font-size: 24px;
+            }
+            .button{
+                margin: 25px 6px 5px;
+            }
+            input[type="button"]{
+                font-size:17px;
+            }
+            
+        }
+    </style>
+</head>
+<body align="center">
+
+    <div class="box">
+        <div class="con">
+        <h1>&star;<u>Life</u> <u>Enumeration</u>&star;</h1>
+        <label> Enter Your Birth Date :- <br><input type="datetime-local" name="dob" id="dob">
+        </label>
+        <div class="button"><input type="button" value="CLEAR" onclick="Clr()"></div>
+        <div class="button"><input type="button" data-bs-toggle="modal" data-bs-target="#myModal" value="CALCULATE" onclick="Cal()"></div>
+        <h4 id="didnot" style="color: red;text-align:center"></h4>
+    </div></div>
+
+    <!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h2 class="modal-title">Your Enumerated Life</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div><h4>Total Years :- </h4><h4 class="time" id="years">NULL</h4></div>
+          <div><h4>Total Months :- </h4><h4 class="time" id="months">NULL</h4></div>
+          <div><h4>Total Weeks :- </h4><h4 class="time" id="weeks">NULL</h4></div>
+          <div><h4>Total Days :- </h4><h4 class="time" id="days">NULL</h4></div>
+          <div><h4>Total Hours :- </h4><h4 class="time" id="hours">NULL</h4></div>
+          <div><h4>Total Minutes :- </h4><h4 class="time" id="minutes">NULL</h4></div>
+          <div><h4>Total Seconds :- </h4><h4 class="time" id="seconds">NULL</h4>
+        </div>
+
+          <br>
+
+          <div>
+            <h4><u>Great Thought</u> :- </h4><h5>Time is Like a River. You cannot touch the same water twice, because the flow of river has passed will never pass again. So, Enjoy every Moment of your life. </h5>
+
+        <marquee style="color:darkblue ;font-weight:bold;text-align:right">
+            - By Marcus Aurelius</marquee>
+        </div>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+    <script>
+        function Clr(){
+            document.getElementById("dob").value = "" ;
+        }
+        function Cal(){
+            var dob = document.getElementById("dob").value,
+                day = new Date(dob),
+                bdaytime = day.getTime(),
+                today= new Date(),
+                timenow = today.getTime(),
+                value = timenow - bdaytime,
+                sec = Math.floor( value / 1000 ),
+                min = Math.floor( value / (1000*60 )),
+                hour = Math.floor( value / (1000*60*60)),
+                days = Math.floor( value / (1000*60*60*24)),
+                week = Math.floor( value / (1000*60*60*24*7)),
+                month = Math.floor( value / (1000*60*60*24*30.4375)),
+                year = Math.floor( value / (1000*60*60*24*365.25));
+        
+                document.getElementById("years").innerHTML = year + " years.";
+                document.getElementById("months").innerHTML = month + " months.";
+                document.getElementById("weeks").innerHTML = week + " weeks.";
+                document.getElementById("days").innerHTML = days + " days.";
+                document.getElementById("hours").innerHTML = hour + " hours.";
+                document.getElementById("minutes").innerHTML = min + " minutes.";
+                document.getElementById("seconds").innerHTML = sec + " seconds.";
+        
+                // setInterval(Cal ,1000);
+        
+                if( dob == "" ){
+                    document.getElementById("years").innerHTML = "NULL";
+                    document.getElementById("months").innerHTML = "NULL";
+                    document.getElementById("weeks").innerHTML = "NULL";
+                    document.getElementById("days").innerHTML = "NULL";
+                    document.getElementById("hours").innerHTML = "NULL";
+                    document.getElementById("minutes").innerHTML = "NULL";
+                    document.getElementById("seconds").innerHTML = "NULL";
+                }
+        }
+    </script>
+</body>
+</html>

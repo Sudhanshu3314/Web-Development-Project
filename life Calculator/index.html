@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Sudhanshu Barnwal">
+    <meta name="keywords"
+        content="calculator, age , age calculator , time , years , date of birth, month , date , seconds, minute , hours">
+    <meta name="description"
+        content="Age calculator is created by Developer Sudhanshu Barnwal for getting information that how much time he/she live their life on Earth.">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <title>Age Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="life.css">
+</head>
+
+<body align="center">
+
+    <div class="box">
+        <div class="con">
+            <h1>&star;<u>Life</u> <u>Enumeration</u>&star;</h1>
+            <label> Enter Your Birth Date :- <br><input type="datetime-local" name="dob" id="dob">
+            </label>
+            <label class="allbtn">
+                <div class="button"><input type="button" value="CLEAR" onclick="Clr()"></div>
+                <div class="button"><input type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                        value="CALCULATE" onclick="Cal()"></div>
+            </label>
+            <footer>
+                <marquee class="sud">-By <a target="_blank" href="https://whytedevil.netlify.app/">Whyte Devil</a></marquee>
+            </footer>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h2 class="modal-title">Your Enumerated Life</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div>
+                        <h4>Total Years :- </h4>
+                        <h4 class="time" id="years">NULL</h4>
+                    </div>
+                    <div>
+                        <h4>Total Months :- </h4>
+                        <h4 class="time" id="months">NULL</h4>
+                    </div>
+                    <div>
+                        <h4>Total Weeks :- </h4>
+                        <h4 class="time" id="weeks">NULL</h4>
+                    </div>
+                    <div>
+                        <h4>Total Days :- </h4>
+                        <h4 class="time" id="days">NULL</h4>
+                    </div>
+                    <div>
+                        <h4>Total Hours :- </h4>
+                        <h4 class="time" id="hours">NULL</h4>
+                    </div>
+                    <div>
+                        <h4>Total Minutes :- </h4>
+                        <h4 class="time" id="minutes">NULL</h4>
+                    </div>
+                    <div>
+                        <h4>Total Seconds :- </h4>
+                        <h4 class="time" id="seconds">NULL</h4>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <h4><u>Great Thought</u> :- </h4>
+                        <h5>Time is Like a River. You cannot touch the same water twice, because the flow of river has
+                            passed will never pass again. So, Enjoy every Moment of your life. </h5>
+
+                        <marquee style="color:darkblue ;font-weight:bold;text-align:right">
+                            - By Marcus Aurelius</marquee>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="life.js"></script>
+</body>
+
+</html>

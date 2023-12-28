@@ -1,0 +1,198 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+nav {
+    background-color: black;
+    box-sizing: border-box;
+    width: 580px;
+    z-index: 3;
+    border-right: 16px double white;
+    border-bottom-right-radius: 100px;
+    box-shadow: 10px 0px 20px white;
+}
+
+nav li {
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0px 0px 20px white;
+    border-radius: 50px;
+    margin: 15px;
+}
+
+nav li:hover {
+    background-color: white;
+    color: black;
+    font-weight: 800;
+    text-shadow: 0px 0px 14px black;
+}
+
+nav li a:hover {
+    color: black;
+}
+
+nav li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+nav ul {
+    margin-top: 0px;
+    box-sizing: border-box;
+    padding: 17px 10px;
+    list-style: none;
+}
+
+.top {
+    background-color: rgba(11, 11, 11);
+    color: white;
+    font-size: 60px;
+    display: flex;
+    height: 10%;
+    border-bottom: 10px double white;
+    justify-content: center;
+    text-shadow: 0px 0px 10px white;
+}
+
+.top b {
+    margin: 7px auto 29px;
+    display: block;
+}
+
+img[alt="My Logo"] {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 20px;
+    border: 3px solid yellow;
+    box-shadow: 0px 0px 18px white;
+    border-radius: 100%;
+}
+
+.bx-menu {
+    position: relative;
+    top: 16px;
+    left: 20px;
+    font-size: 100px;
+}
+
+.sidebar {
+    position: relative;
+    left: -630px;
+    transition: all 1.4s ease;
+}
+
+.sidebar.on {
+    left: 0px;
+}
+
+#chevup {
+    color: white;
+    background-color: rgb(0, 0, 0, 0.4);
+    border-radius: 100%;
+    font-size: 90px;
+    position: fixed;
+    bottom: 7%;
+    right: 7%;
+    box-shadow: 0px 0px 14px black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width:800px) and (min-width:400px) {
+    .top {
+        font-size: 28px;
+    }
+
+    .top b {
+        margin-bottom: 20px;
+    }
+
+    #chevup {
+        font-size: 70px;
+    }
+
+    img[alt="My Logo"] {
+        width: 36px;
+        height: 36px;
+        top: 8px;
+    }
+
+    .bx-menu {
+        position: relative;
+        top: 14px;
+        left: 17px;
+        font-size: 50px;
+    }
+
+    nav {
+        border-right: 8px double yellow;
+        border-bottom-right-radius: 50px;
+        width: 380px;
+    }
+
+    nav li {
+        padding: 10px 8px;
+        box-shadow: 0px 0px 10px white;
+        margin: 15px 18px;
+        box-shadow: 0px 0px 15px white;
+    }
+
+    nav li a {
+        cursor: none;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:400px) and (min-width:300px) {
+    .top {
+        font-size: 20px;
+    }
+
+    .top b {
+        margin-bottom: 18px;
+    }
+
+    #chevup {
+        font-size: 50px;
+    }
+
+    img[alt="My Logo"] {
+        width: 33px;
+        height: 33px;
+        top: 7px;
+    }
+
+    .bx-menu {
+        position: relative;
+        top: 11px;
+        left: 7px;
+        font-size: 40px;
+    }
+
+    nav {
+        border-right: 8px double yellow;
+        border-bottom-right-radius: 50px;
+        width: 310px;
+    }
+
+    nav ul {
+        padding: 9px 3px 9px;
+    }
+
+    nav li {
+        padding: 4px 5px;
+        box-shadow: 0px 0px 10px white;
+        margin: 12px 14px;
+    }
+
+    nav li a {
+        font-size: 13px;
+        cursor: none;
+    }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try</title>
+</head>
+
+<body>
+    <div onclick="hello()" class="answer">Sudhanshu</div>
+
+    <script>
+        let answerDiv = document.querySelector(".answer")
+        let countGuess = 0 
+        function hello(){
+            let ans = document.createElement("p")
+            ans.innerHTML = ++countGuess + ")<span style='color:red'>Try Again...</span><br>Apka guessed number bada hai original se.........."
+            answerDiv.appendChild(ans)
+        }
+            </script>
+</body>
+
+</html>

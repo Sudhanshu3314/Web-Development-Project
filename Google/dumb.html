@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal from Sudhanshu</title>
+    <style>
+        #name {
+            color: rgb(214, 0, 0);
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin: 4px auto;
+        }
+
+        button {
+            margin: 16px 20px;
+            font-size: 25px;
+        }
+
+        button[onmouseover="No()"] {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>I am Sudhanshu. I want to say that</h1>
+        <h1>I love you <span id="name"></span> <span style="color:red">&#x2764;</span></p>
+        </h1>
+
+        <div>
+            <button onclick="yes()">Accepted</button>
+            <button id="no" onmouseover="No()">Rejected</button>
+        </div>
+    </form>
+
+    <script>
+        let a = prompt("Enter your name ");
+        document.getElementById("name").innerText = a.toUpperCase();
+
+        function yes() {
+
+            window.open("https://wa.me/919004877026?text=" +
+                'I love you too Sudhanshu'
+                , '_blank').focus();
+        }
+
+        function No() {
+            let btn = document.getElementById("no");
+            btn.style.left = Math.ceil(Math.random() * 360) + "px";
+            btn.style.top = Math.ceil(Math.random() * 360) + "px";
+            btn.style.transition = "1s";
+        }
+    </script>
+</body>
+
+</html>

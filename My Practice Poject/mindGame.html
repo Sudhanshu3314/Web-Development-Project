@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Game</title>
+    <style>
+        h1{
+            font-size: 30px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .btn button{
+            font-weight: bold;
+            font-size: 22px;
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+        .btn{
+            font-size: 23px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        h3{
+            text-align: center;
+            font-size: 23px;
+            text-shadow: 0px 0px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <h1> &star; <u>Mind Game</u> &star; </h1>
+
+    <h3 id="res">Follow This Steps</h3>
+
+    <p class="btn">Step 1 : <button style="color: darkred;" onclick="First()">1<sup>st</sup> Click Me</button></p>
+
+    <p class="btn">Step 2 : <button style="color: darkblue;" onclick="Second()">2<sup>nd</sup> Click Me</button></p>
+
+    <p class="btn">Step 3 : <button style="color: darkgreen;" onclick="Third()">3<sup>rd</sup> Click Me</button></p>
+
+    <p class="btn">Step 4 : <button style="color: darkblue;" onclick="Fourth()">4<sup>th</sup> Click Me</button></p>
+
+    <p class="btn">Step 5 : <button  style="color: darkred;"  onclick="Fifth()">5<sup>th</sup> Click Me</button></p>
+    
+    <p class="btn">Step 6 : <button style="color: darkgreen;" onclick="Sixth()">6<sup>th</sup> Click Me</button></p>
+    
+
+    <script>
+        function First(){
+            document.getElementById("res").innerHTML = '<span style="color: darkred;">Think Any random Number which <br> can be easy for your calculation</span>'
+
+            speechSynthesis.speak( new SpeechSynthesisUtterance("Think Any random Number which <br> can be easy for your calculation"));
+        }
+        function Second(){
+            document.getElementById("res").innerHTML = '<span style="color: darkblue;">Multiply it By 2 that Number</span>'
+
+            speechSynthesis.speak( new SpeechSynthesisUtterance("Multiply it By 2 that Number"));
+        }
+
+        var number = Math.round(Math.random()*100) + 1 
+        console.log(number);
+        function Third(){
+            if ( number < 21 ) {
+                if ( (number + 20) % 2 == 0 ) {
+                    number = number + 20
+                }
+                else {
+                    number = number + 21
+                }
+            }
+            else{
+                if ( number % 2 == 0 ) {
+                    number = number
+                }
+                else {
+                    number = number + 1
+                }
+            }
+            document.getElementById("res").innerHTML = '<span style="color: darkgreen;">Add this <u>' + number + '</u> underline number to <br>your resultant number </span>'
+
+            speechSynthesis.speak( new SpeechSynthesisUtterance("Add this " + number + 
+            " underline number to <br>your resultant number"));
+        }
+        
+        function Fourth(){
+            document.getElementById("res").innerHTML = '<span style="color: darkblue;">Now, Divide it By 2 <br>that resultant Number</span>'
+
+            speechSynthesis.speak( new SpeechSynthesisUtterance("Now, Divide it By 2 that resultant Number"));
+        }
+        
+        function Fifth(){
+            document.getElementById("res").innerHTML='<span style="color:darkred">Now, You need to subtract <br>the number whatever you think<br> at 1<sup>st</sup> step</span>'
+
+            speechSynthesis.speak( new SpeechSynthesisUtterance("Now, You need to subtract the number whatever you think at first step"));
+        }
+        function Sixth(){
+            document.getElementById("res").innerHTML='<span style="color:darkgreen">You Got the Answer : ' + (number / 2) + '</span>'
+
+            speechSynthesis.speak( new SpeechSynthesisUtterance("You Got the Answer : " + (number / 2) ));
+
+            setTimeout(() => {
+                location.reload()
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

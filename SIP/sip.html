@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <style>
+        .container{
+            margin: auto;
+            border: 3px solid darkgreen;
+            min-width: 200px;
+            padding: 18px 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 2px black;
+            margin: 25px 40px;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        label{
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(126, 14, 14);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        input[type='number']{
+            font-size: 25px;
+            width: 80px;
+            border-radius: 10px;
+            outline: none;
+            border: 2px solid red;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            box-shadow: 0px 0px 7px 1px black;
+            padding:4px 10px;
+            margin: 5px;
+        }
+        @media (max-width : 740px ) {
+            label{
+                font-size: 20px;
+            }
+            input[type='number']{
+                font-size: 17px;
+            }
+            .container{
+                margin: 10px 20px;
+            }
+        }
+        @media (max-width : 575px ) {
+            label{
+                font-size: 15px;
+            }
+            input[type='number']{
+                font-size: 10px;
+            }
+            .container{
+                margin: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body align="center">
+    <div class="heading"><h1>&star; <u>SIP Calculator</u> &star;</h1></div>
+    <div class="container">
+        <form>
+            <label>Monthly Invested Amount : Rs <input type="number" name="money" id="money"> </label> <br>
+            <label>Rate of Interest : <input type="number" name="interest" id="interest"> % </label> <br>
+            <label>No. of Years : <input type="number" name="years" id="years"> years </label>
+        </form>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

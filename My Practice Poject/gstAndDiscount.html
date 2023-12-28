@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount and Gst</title>
+    <style>
+        select {
+            font-size: 40px;
+            border: none;
+            outline: none;
+            background-color: none;
+        }
+
+        .btn {
+            display: flex;
+            gap: 30px;
+        }
+
+        input[type='button'] {
+            font-size: 22px;
+            border-radius: 20px;
+            border: 2px solid brown;
+            font-weight: bold;
+            color: red;
+            background-color: aliceblue;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(7, 7, 130);
+            margin: 15px;
+        }
+
+        input[type='number'] {
+            width: 190px;
+            padding: 5px 10px;
+            outline: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-radius: 20px;
+            border: 4px double red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend id="legend"> <select onchange="Calculate()" id="disGst">
+                    <option class="add" value="Discount">Discount</option>
+                    <option class="add" value="Gst">GST</option>
+                </select></legend>
+            <label>Price : <input type="number" placeholder="Price......." name="price" id="price" autofocus
+                    autocomplete="off" required></label>
+
+            <label>Percentage (%) : <input type="number" placeholder="Percentage(%)..........." autocapitalize="off"
+                    required name="percentage" id="percentage"></label>
+
+            <label class="btn"><input type="button" value="Calculate" onclick="Calculate()">
+
+                <input type="button" value="Clear" title="Do double Click for Clear all the price" ondblclick="Clr()"></label>
+        </fieldset>
+    </form>
+
+    <h1 id="amount"></h1>
+    <h1 id="total"></h1>
+
+    <script>
+
+        function validPercentage() {
+            let percentage = parseFloat(document.getElementById('percentage').value);
+            let price = parseFloat(document.getElementById('price').value);
+
+            if (percentage < 0) {
+                alert("Percentage is NOT lesser than 0%")
+                document.getElementById('percentage').value = ""
+            }
+            else if (percentage > 100) {
+                alert("Percentage must be NOT greater than 100%")
+                document.getElementById('percentage').value = ""
+            }
+        }
+
+        function Empty() {
+            if (document.getElementById('price').value == "" && document.getElementById('percentage').value == "") {
+                alert("Enter the value of Price and Percentage")
+                document.getElementById("total").innerHTML = document.getElementById("amount").innerHTML = ""
+            }
+            else if (document.getElementById('percentage').value == "") {
+                alert("Enter the value of Percentage")
+                document.getElementById("total").innerHTML = document.getElementById("amount").innerHTML = ""
+            }
+            else if (document.getElementById('price').value == "") {
+                alert("Enter the value of Price")
+                document.getElementById("total").innerHTML = document.getElementById("amount").innerHTML = ""
+            }
+        }
+
+        function gst() {
+            let percentage = parseFloat(document.getElementById('percentage').value);
+            let price = parseFloat(document.getElementById('price').value);
+            validPercentage()
+            const gst = (price * percentage) / 100
+            const gstPrice = (price + gst)
+            document.getElementById("amount").innerHTML = "Gst : " + gst;
+            document.getElementById("total").innerHTML = "Total Amount : " + gstPrice;
+            Empty()
+        }
+
+        function dis() {
+            let percentage = parseFloat(document.getElementById('percentage').value);
+            let price = parseFloat(document.getElementById('price').value);
+            validPercentage()
+            const dis = (price * percentage) / 100
+            const disPrice = (price - dis)
+            document.getElementById("amount").innerHTML = "Discount : " + dis;
+            document.getElementById("total").innerHTML = "Total Amount : " + disPrice;
+            Empty()
+        }
+
+        function Calculate() {
+            switch (document.getElementById("disGst").value) {
+                case "Discount":
+                    dis()
+                    break
+                case "Gst":
+                    gst()
+                    break
+            }
+        }
+
+        function Clr() {
+            document.getElementById('percentage').value = document.getElementById('price').value = ""
+            document.getElementById("total").innerHTML = document.getElementById("amount").innerHTML = ""
+        }
+
+    </script>
+</body>
+
+</html>
